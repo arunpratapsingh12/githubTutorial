@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Interactive Card</title>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+  </style>
+</head>
+<body>
+  <div class="card" id="interactiveCard">
+    <h2>Card Title</h2>
+    <p>This is a simple interactive card.</p>
+    <button onclick="toggleCard()">Toggle Shadow</button>
+  </div>
+  <script>
+    function toggleCard() {
+  const card = document.getElementById('interactiveCard');
+  card.classList.toggle('active');
+}
+
+  </script>
+</body>
+</html>
